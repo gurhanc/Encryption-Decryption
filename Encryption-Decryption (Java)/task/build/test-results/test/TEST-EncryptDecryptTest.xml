@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EncryptDecryptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-07-24T20:52:42" hostname="Gurhan-PC" time="0.033">
+<testsuite name="EncryptDecryptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-07-26T19:42:22" hostname="Gurhan-PC" time="0.083">
   <properties/>
-  <testcase name="start" classname="EncryptDecryptTest" time="0.033"/>
-  <system-out><![CDATA[\jqhtrj%yt%m~ujwxpnqq&
-Hello
-123456789
-Welcome to hyperskill!
-Hi
-111122223333
+  <testcase name="start" classname="EncryptDecryptTest" time="0.083"/>
+  <system-out><![CDATA[3
+1
+14
+10
+2
+4
+1
+14
+8
 ]]></system-out>
   <system-err><![CDATA[Start test 1
 Start test 2
@@ -15,5 +18,10 @@ Start test 3
 Start test 4
 Start test 5
 Start test 6
+Start test 7
+Start test 8
+Start test 9
+Start test 10
+Start test 11
 ]]></system-err>
 </testsuite>

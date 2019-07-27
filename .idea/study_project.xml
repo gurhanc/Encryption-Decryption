@@ -429,7 +429,7 @@
           <option name="items">
             <list>
               <FrameworkLesson>
-                <option name="currentTaskIndex" value="3" />
+                <option name="currentTaskIndex" value="5" />
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="1" />
@@ -598,7 +598,7 @@
                       <option name="id" value="5390" />
                       <option name="index" value="4" />
                       <option name="name" value="I command you" />
-                      <option name="record" value="-1" />
+                      <option name="record" value="4" />
                       <option name="status" value="Solved" />
                       <option name="files">
                         <map>
@@ -675,8 +675,8 @@
                       <option name="id" value="5391" />
                       <option name="index" value="5" />
                       <option name="name" value="X-files" />
-                      <option name="record" value="-1" />
-                      <option name="status" value="Unchecked" />
+                      <option name="record" value="5" />
+                      <option name="status" value="Solved" />
                       <option name="files">
                         <map>
                           <entry key="test/EncryptDecryptTest.java">
@@ -699,9 +699,51 @@
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="src/encryptdecrypt/Main.java" />
                                 <option name="text" value="package encryptdecrypt;&#10;&#10;public class Main {&#10;    public static void main(String[] args) {&#10;        System.out.println(&quot;Hello World!&quot;);&#10;    }&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/encryptdecrypt/Parser.java">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/encryptdecrypt/Parser.java" />
+                                <option name="text" value="package encryptdecrypt;&#10;&#10;import java.util.ArrayList;&#10;import java.util.HashMap;&#10;&#10;public class Parser {&#10;&#10;    private String[] args;&#10;    private HashMap&lt;String,String&gt; dict;&#10;    private String commands = &quot;&quot;;&#10;    private ArrayList&lt;String&gt; array;&#10;&#10;    public Parser(String[] args) {&#10;        this.args = args;&#10;        this.dict = new HashMap&lt;&gt;();&#10;        this.array = new ArrayList&lt;&gt;();&#10;    }&#10;&#10;    public void map() {  // returns arguments in hash map&#10;        int i = 0;&#10;        while (i&lt;this.args.length) {&#10;            String arg = this.args[i];&#10;            this.dict.put(arg.substring(1),this.args[i+1]);&#10;            i += 2;&#10;        }&#10;    }&#10;&#10;    public ArrayList&lt;String&gt; findCommands() {&#10;        String mode;&#10;        String data = this.dict.get(&quot;data&quot;);&#10;        String shiftNumber = this.dict.get(&quot;key&quot;);&#10;&#10;        if (this.dict.size() == 2) {&#10;            mode = &quot;enc&quot;;&#10;        }&#10;        else {&#10;            mode = this.dict.get(&quot;mode&quot;);&#10;        }&#10;        this.array.add(mode);&#10;        this.array.add(shiftNumber);&#10;        this.array.add(data);&#10;        return this.array;&#10;    }&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/encryptdecrypt/Crypto.java">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/encryptdecrypt/Crypto.java" />
+                                <option name="text" value="package encryptdecrypt;&#10;&#10;public class Crypto {&#10;&#10;    public Crypto() {}  // initialize class&#10;&#10;    public static String encryptLetters(String letter, int shift) {  // method to encrypt&#10;        int i;&#10;        String encrypted = &quot;&quot;;&#10;        for (i=0;i&lt;letter.length();i++) {&#10;            encrypted += (char) (((int) letter.charAt(i))+shift);&#10;        }&#10;        return encrypted;&#10;    }&#10;&#10;    public static String decryptLetters(String letter, int shift) {  // method to decrypt&#10;        int i;&#10;        String decrypted = &quot;&quot;;&#10;        for (i=0;i&lt;letter.length();i++) {&#10;            decrypted += (char) (((int) letter.charAt(i))-shift);&#10;        }&#10;        return decrypted;&#10;    }&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="output.txt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="output.txt" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="visible" value="true" />
                               </TaskFile>
@@ -725,7 +767,7 @@
                       <option name="index" value="6" />
                       <option name="name" value="Choices, choices" />
                       <option name="record" value="-1" />
-                      <option name="status" value="Unchecked" />
+                      <option name="status" value="Solved" />
                       <option name="files">
                         <map>
                           <entry key="test/EncryptDecryptTest.java">
@@ -748,9 +790,51 @@
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="src/encryptdecrypt/Main.java" />
                                 <option name="text" value="package encryptdecrypt;&#10;&#10;public class Main {&#10;    public static void main(String[] args) {&#10;        System.out.println(&quot;Hello World!&quot;);&#10;    }&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="output.txt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="output.txt" />
+                                <option name="text" value="111122223333" />
+                                <option name="trackChanges" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/encryptdecrypt/Parser.java">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/encryptdecrypt/Parser.java" />
+                                <option name="text" value="package encryptdecrypt;&#10;&#10;import java.io.File;&#10;import java.io.FileWriter;&#10;import java.io.IOException;&#10;import java.util.ArrayList;&#10;import java.util.HashMap;&#10;import java.nio.file.Files;&#10;import java.nio.file.Paths;&#10;import java.io.BufferedReader;&#10;&#10;public class Parser {&#10;&#10;    private String[] args;&#10;    private HashMap&lt;String,String&gt; dict;&#10;    private ArrayList&lt;String&gt; array;&#10;&#10;    public Parser(String[] args) {&#10;        this.args = args;&#10;        this.dict = new HashMap&lt;&gt;();&#10;        this.array = new ArrayList&lt;&gt;();&#10;    }&#10;&#10;    public void map() {  // returns arguments in hash map&#10;        int i = 0;&#10;        while (i&lt;this.args.length) {&#10;            String arg = this.args[i];&#10;            this.dict.put(arg.substring(1),this.args[i+1]);&#10;            i += 2;&#10;        }&#10;    }&#10;&#10;    public ArrayList&lt;String&gt; findCommands() {&#10;        String data;&#10;        String mode;&#10;        String out;&#10;        String in;&#10;        if (!this.dict.containsKey(&quot;data&quot;)) {&#10;            data = &quot;fromFile&quot;;&#10;        }&#10;        else {&#10;            data = this.dict.get(&quot;data&quot;);&#10;        }&#10;        String shiftNumber = this.dict.get(&quot;key&quot;);&#10;        if (!this.dict.containsKey(&quot;mode&quot;)) {&#10;            mode = &quot;enc&quot;;&#10;        }&#10;        else {&#10;            mode = this.dict.get(&quot;mode&quot;);&#10;        }&#10;        if (!this.dict.containsKey(&quot;out&quot;)) {&#10;            out = &quot;printOut&quot;;&#10;        }&#10;        else {&#10;            out = this.dict.get(&quot;out&quot;);&#10;        }&#10;        if (!this.dict.containsKey(&quot;in&quot;)) {&#10;            in = &quot;fromCommandLine&quot;;&#10;        }&#10;        else {&#10;            in = this.dict.get(&quot;in&quot;);&#10;        }&#10;        this.array.add(mode);&#10;        this.array.add(shiftNumber);&#10;        this.array.add(data);&#10;        this.array.add(in);&#10;        this.array.add(out);&#10;        return this.array;&#10;    }&#10;&#10;&#10;    public String readFileExceptionHandling(String fileName) {&#10;        String result = &quot;&quot;;&#10;        try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName))) {&#10;&#10;            // read line by line&#10;            String line;&#10;            while ((line = br.readLine()) != null) {&#10;                result += line;&#10;            }&#10;        } catch (IOException e) {&#10;            System.out.println(&quot;There is no such file, &quot;+e.getMessage());&#10;        }&#10;        return result;&#10;    }&#10;&#10;    public void writeFileExceptionHandling(String fileName, String output) {&#10;        File file = new File(fileName);&#10;        try ( FileWriter writer = new FileWriter(file)){&#10;            writer.write(output);&#10;        }&#10;        catch (IOException e) {&#10;            System.out.println(&quot;An exception occured while writing &quot;+e.getMessage());&#10;        }&#10;    }&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/encryptdecrypt/Crypto.java">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/encryptdecrypt/Crypto.java" />
+                                <option name="text" value="package encryptdecrypt;&#10;&#10;public class Crypto {&#10;&#10;    public Crypto() {}  // initialize class&#10;&#10;    public static String encryptLetters(String letter, int shift) {  // method to encrypt&#10;        int i;&#10;        String encrypted = &quot;&quot;;&#10;        for (i=0;i&lt;letter.length();i++) {&#10;            encrypted += (char) (((int) letter.charAt(i))+shift);&#10;        }&#10;        return encrypted;&#10;    }&#10;&#10;    public static String decryptLetters(String letter, int shift) {  // method to decrypt&#10;        int i;&#10;        String decrypted = &quot;&quot;;&#10;        for (i=0;i&lt;letter.length();i++) {&#10;            decrypted += (char) (((int) letter.charAt(i))-shift);&#10;        }&#10;        return decrypted;&#10;    }&#10;}&#10;" />
                                 <option name="trackChanges" value="true" />
                                 <option name="visible" value="true" />
                               </TaskFile>
